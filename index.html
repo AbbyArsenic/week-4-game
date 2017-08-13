@@ -3,36 +3,38 @@
 <head>
   <meta charset="utf-8">
   <title>Crystal Collector</title>
-  <style type="text/css" src="assets/css/reset.css"></style>
-  <style type="text/css" src="assets/css/style.css"></style>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
-  <h1>Crystals Collector</h1>
-    <!-- instruction panel -->
-    <div id="container">
-      <p class="instructions">You will be given a random number at the start of the game.</p>
-      <p class="instructions">There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
-      <p class="instructions">You win the game by matching your total score to the random number. You lose the game if your total exceeds the random number.</p>
-      <p class="instructions">The value of each crystal is hidden from you until you click on it.</p>
-      <p class="instructions">At the start of each round, the random number and the value of each crystal will change.</p>
+  <div id="container">
+    <h1>Crystals Collector</h1>
+      <!-- instruction panel -->
+      <div id="instructions">
+        <p>You will be given a random number at the start of the game.</p>
+        <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
+        <p>You win the game by matching your total score to the random number. You lose the game if your total exceeds the random number.</p>
+        <p>The value of each crystal is hidden from you until you click on it.</p>
+        <p>At the start of each round, the random number and the value of each crystal will change.</p>
+      </div>
+      <!-- target number and user guesses -->
+      <h2>Match this number to win: <span id="randomNumber"></span></h2>
+      <div class="total">Your crystal total is:</div>
+      <div class="total" id="score">0</div>
+      <!-- crystal images (display inline) -->
+      <div id="crystals">
+        <img class="crystal-img" id="red" src="assets/images/red.png" alt="red crystal">
+        <img class="crystal-img" id="blue" src="assets/images/blue.png" alt="blue crystal">
+        <img class="crystal-img" id="yellow" src="assets/images/yellow.png" alt="yellow crystal">
+        <img class="crystal-img" id="green" src="assets/images/green.png" alt="green crystal">
+      </div>
+      <!-- win/loss counter display -->
+      <div id="win-loss">
+      <p>Wins: <span id="win"></span></p>
+      <p>Losses: <span id="loss"></span></p>
+      </div>
     </div>
-    <!-- target number and win/loss counters -->
-    <div>Match this number to win: <span id="randomNumber"></span></div>
-    <div id="win-loss">
-    <p>Wins: <span id="win"></span></p>
-    <p>Losses: <span id="loss"></span></p>
-    </div>
-    <!-- crystal images (display inline) -->
-    <div id="crystals">
-      <img class="crystal-img" id="red" src="assets/images/red.png" alt="red crystal">
-      <img class="crystal-img" id="blue" src="assets/images/blue.png" alt="blue crystal">
-      <img class="crystal-img" id="yellow" src="assets/images/yellow.png" alt="yellow crystal">
-      <img class="crystal-img" id="green" src="assets/images/green.png" alt="green crystal">
-    </div>
-    <!-- user scores -->
-    <div class="total">Your total score is:</div>
-    <div class="total" id="score">0</div>
 
   <!-- jquery -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

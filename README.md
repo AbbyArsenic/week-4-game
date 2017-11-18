@@ -1,2 +1,4 @@
-# week-4-game
-Homework for week 4
+# Crystal Collector
+Built utilizing jQuery
+
+

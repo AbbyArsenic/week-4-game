@@ -16,6 +16,7 @@ $(document).ready(function() {
 
   //game functions
   function startGame() {
+    crystals = [];
     targetNum = Math.floor(Math.random()*102) + 19;
     guessSum = 0;
     $("#randomNumber").text(targetNum);
